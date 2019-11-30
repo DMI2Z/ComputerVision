@@ -155,7 +155,8 @@ def captureCamera(camera: cv2.VideoCapture, tag: str = None):
 # когда поставим код на робота нужно будет переписать
 def main(*args, **kwargs) -> int:
     cap = cv2.VideoCapture(0)
-
+    
+    # это очередь из камер
     queue = [
         captureCamera(cap, "Camera-first"),
         captureCamera(cap, "Camera-second")
